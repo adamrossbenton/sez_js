@@ -8,6 +8,7 @@ import Footer from "./components/Footer.js"
 import Main from "./pages/Main.js"
 
 function App() {
+  
   return (
     <div className="App">
       <Header/>
