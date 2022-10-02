@@ -24,6 +24,7 @@
 
 .game-piece {
     border: 3px solid black;
+    margin: 2px 0px;
     height: 100px;
     width: 100px;
 }
