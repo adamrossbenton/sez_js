@@ -6,13 +6,35 @@ import {
   Route,
 } from "react-router-dom"
 import './index.css';
+
+// COMPONENETS
 import App from './App';
+import Error from "./pages/Error.js"
+import Easy from "./pages/Easy.js"
+import Medium from "./pages/Medium.js"
+import Hard from "./pages/Hard.js"
+
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "easy",
+        element: <Easy />,
+      },
+      {
+        path: "medium",
+        element: <Medium />,
+      },
+      {
+        path: "hard",
+        element: <Hard />,
+      }
+    ]
   },
 ])
 
