@@ -4,6 +4,18 @@ const Main = props => {
 
     // Difficulty state
     const [difficulty, setDifficulty] = useState()
+    const [selection, setSelection] = useState()
+
+    const handleCheck = e => {
+        setSelection({...selection, 
+            [e.target.name]: e.target.checked
+        })
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        
+    }
 
     console.log(difficulty)
 
@@ -38,9 +50,9 @@ const Main = props => {
         return <div className="container" id="diff-select">
             <h3>Choose Difficulty</h3>
             <div className="container" id="diff-choices">
-                <button>EASY</button>
-                <button>MEDIUM</button>
-                <button>HARD</button>
+                <form className="diff-choice">
+                    <button type="submit"></button>
+                </form>
             </div>
         </div>
     }
