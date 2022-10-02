@@ -1,10 +1,12 @@
+// DEPENDENCIES
+
 // STYLING
 import './App.css';
 
 // COMPONENTS
 import Header from "./components/Header.js"
 import Footer from "./components/Footer.js"
-import Main from "./Main.js"
+import Main from "./pages/Main.js"
 
 function App() {
   return (
