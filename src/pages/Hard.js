@@ -3,12 +3,12 @@ import React from "react";
 const Hard = props => {
     const hardBoard = () => {
         return <div className="board" id="hard-board">
-            <div className="game-piece" id="med-red">hard red</div>
-            <div className="game-piece" id="med-blue">hard blue</div>
-            <div className="game-piece" id="med-yellow">hard yellow</div>
-            <div className="game-piece" id="med-green">hard green</div>
-            <div className="game-piece" id="med-orange">hard orange</div>
-            <div className="game-piece" id="med-purple">hard purple</div>
+            <div className="game-piece red" id="med-red"></div>
+            <div className="game-piece blue" id="med-blue"></div>
+            <div className="game-piece yellow" id="med-yellow"></div>
+            <div className="game-piece green" id="med-green"></div>
+            <div className="game-piece orange" id="med-orange"></div>
+            <div className="game-piece purple" id="med-purple"></div>
         </div>
     }
 
