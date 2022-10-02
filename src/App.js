@@ -1,7 +1,6 @@
-// DEPENDENCIES
-
 // STYLING
 import './App.css';
+import './Styles.css';
 
 // COMPONENTS
 import Header from "./components/Header.js"

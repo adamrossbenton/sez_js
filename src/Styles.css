@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+@media (min-width: 769px) {
+
+    .container {
+        padding: 25px 150px;
+    }
+
+    .board {
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: rgba(100,100,100,0.5);
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
