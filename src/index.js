@@ -20,7 +20,7 @@ import GameHooks from './hooks/GameHooks.js';
 // OTHER
 import reportWebVitals from './reportWebVitals';
 
-const {compChoose, playerChoose, turnPass, turnCounter} = GameHooks()
+const {compChoose, playerChoose, turn, turnCounter} = GameHooks()
 
 const router = createBrowserRouter([
   {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element: <Easy
           compChoose = {compChoose}
           playerChoose = {playerChoose}
-          turnPass = {turnPass}
+          turn = {turn}
           turnCounter = {turnCounter}
         />,
       },
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         element: <Medium
           compChoose = {compChoose}
           playerChoose = {playerChoose}
-          turnPass = {turnPass}
+          turn = {turn}
           turnCounter = {turnCounter}
         />,
       },
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         element: <Hard
           compChoose = {compChoose}
           playerChoose = {playerChoose}
-          turnPass = {turnPass}
+          turn = {turn}
           turnCounter = {turnCounter}
         />,
       }

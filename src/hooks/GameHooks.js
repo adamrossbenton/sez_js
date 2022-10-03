@@ -7,10 +7,13 @@ const GameHooks = props => {
     const playerChoices = []
     let turnCounter = 0
     let choiceCounter = 0
-    let difficulty = ""
-    let turnPass = true
+    // let difficulty = ""
+    let [turn, setTurn] = useState(false)
 
     const compChoose = diff => {
+
+        // Assign difficulty globally
+        // difficulty = diff
 
         // Add a random color choice to computer selection array
         let nextColor = 0
@@ -36,13 +39,13 @@ const GameHooks = props => {
         // Reset player game state, pass turn to player
         playerChoices.length = 0
         choiceCounter = 0
-        turnPass = false
+        setTurn(true)
     }
 
     const playerChoose = choice => {
         
         // Checks to see if it is the player's turn
-        if (!turnPass) {
+        if (turn) {
             console.log(`Player chose ${choice}`)
             console.log(`Computer choices are ${computerChoices}`)
             
@@ -56,13 +59,14 @@ const GameHooks = props => {
                 // Check to see if all choices have been made (should all be correct)
                 if (choiceCounter+1 === computerChoices.length) {
                     console.log("Correct")
-                    turnPass = true
+                    setTurn(false)
                     turnCounter++
                 }
             // If player chooses wrong answer
             } else {
                 console.log("Fail")
-                turnPass = true
+                setTurn(false)
+                computerChoices.length = 0
             }
             choiceCounter++
         }
@@ -71,7 +75,7 @@ const GameHooks = props => {
     return {
         compChoose,
         playerChoose,
-        turnPass,
+        turn,
         turnCounter,
     }
 }
