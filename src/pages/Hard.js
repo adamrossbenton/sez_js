@@ -5,7 +5,7 @@ const Hard = props => {
     const hardBoard = () => {
 
         // TODO: pass GameHooks as props through Outlet in Main.js instead of importing to each of my board pages
-        const {compChoose, playerChoose, notMyTurn, turnCounter} = GameHooks()
+        const {compChoose, playerChoose, turn, turnCounter} = GameHooks()
 
         const handleSubmit = e => {
             e.preventDefault()
@@ -13,7 +13,7 @@ const Hard = props => {
         }
 
         const playButton = () => {
-            if (notMyTurn) {
+            if (!turn) {
                 return <form onSubmit={handleSubmit}><button className="start-button" id="hard-start" type="submit">START</button></form>
             }
         }
