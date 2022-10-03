@@ -4,16 +4,12 @@ import GameHooks from "../hooks/GameHooks";
 const Hard = props => {
     const hardBoard = () => {
 
-        const {compChoose, playerChoose} = GameHooks()
+        const {compChoose, playerChoose, turnPass, turnCounter} = GameHooks()
 
         const handleSubmit = e => {
             e.preventDefault()
             compChoose("hard")
         }
-
-        // const handleClick = e => {
-        //     e.preventDefault()
-        // }
     
         return <div className="container board-container" id="hard-container">
             <div className="board" id="hard-board">

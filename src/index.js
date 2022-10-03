@@ -15,8 +15,12 @@ import Medium from "./pages/Medium.js"
 import Hard from "./pages/Hard.js"
 
 // HOOKS
+import GameHooks from './hooks/GameHooks.js';
 
+// OTHER
 import reportWebVitals from './reportWebVitals';
+
+const {compChoose, playerChoose, turnPass, turnCounter} = GameHooks()
 
 const router = createBrowserRouter([
   {
@@ -26,15 +30,30 @@ const router = createBrowserRouter([
     children: [
       {
         path: "easy",
-        element: <Easy />,
+        element: <Easy
+          compChoose = {compChoose}
+          playerChoose = {playerChoose}
+          turnPass = {turnPass}
+          turnCounter = {turnCounter}
+        />,
       },
       {
         path: "medium",
-        element: <Medium />,
+        element: <Medium
+          compChoose = {compChoose}
+          playerChoose = {playerChoose}
+          turnPass = {turnPass}
+          turnCounter = {turnCounter}
+        />,
       },
       {
         path: "hard",
-        element: <Hard />,
+        element: <Hard
+          compChoose = {compChoose}
+          playerChoose = {playerChoose}
+          turnPass = {turnPass}
+          turnCounter = {turnCounter}
+        />,
       }
     ]
   },

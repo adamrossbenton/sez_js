@@ -3,7 +3,7 @@ import GameHooks from "../hooks/GameHooks";
 
 const Easy = props => {
 
-    const {compChoose} = GameHooks()
+    const {compChoose, playerChoose, turnPass, turnCounter} = GameHooks()
 
     const handleSubmit = e => {
         e.preventDefault()
