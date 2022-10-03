@@ -15,6 +15,7 @@
     padding: 25px 50px;
     border: 1px solid black;
     border-radius: 15px;
+    max-width: 90%;
 }
 
 .board {
@@ -24,7 +25,7 @@
 
 .game-piece {
     border: 3px solid black;
-    margin: 2px 0px;
+    margin: 2px 2px;
     height: 100px;
     width: 100px;
 }
@@ -65,7 +66,7 @@
         border: 1px solid black;
         border-radius: 10px;
         background-color: rgba(100,100,100,0.5);
-        width: 60%;
+        max-width: 90%;
     }
 }
 

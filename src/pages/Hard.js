@@ -4,23 +4,27 @@ import GameHooks from "../hooks/GameHooks";
 const Hard = props => {
     const hardBoard = () => {
 
-        const {playGame} = GameHooks()
+        const {compChoose, playerChoose} = GameHooks()
 
         const handleSubmit = e => {
             e.preventDefault()
-            playGame("hard")
+            compChoose("hard")
         }
+
+        // const handleClick = e => {
+        //     e.preventDefault()
+        // }
     
         return <div className="container board-container" id="hard-container">
             <div className="board" id="hard-board">
-                <div className="game-piece red" id="med-red"></div>
-                <div className="game-piece blue" id="med-blue"></div>
-                <div className="game-piece yellow" id="med-yellow"></div>
-                <div className="game-piece green" id="med-green"></div>
-                <div className="game-piece orange" id="med-orange"></div>
-                <div className="game-piece purple" id="med-purple"></div>
-                <form onSubmit={handleSubmit}><button className="start-button" id="hard-start" type="submit">START</button></form>
+                <div className="game-piece red" id="hard-red" onClick={e => {e.preventDefault(); playerChoose("red")}}></div>
+                <div className="game-piece blue" id="hard-blue" onClick={e => {e.preventDefault(); playerChoose("blue")}}></div>
+                <div className="game-piece yellow" id="hard-yellow" onClick={e => {e.preventDefault(); playerChoose("yellow")}}></div>
+                <div className="game-piece green" id="hard-green" onClick={e => {e.preventDefault(); playerChoose("green")}}></div>
+                <div className="game-piece orange" id="hard-orange" onClick={e => {e.preventDefault(); playerChoose("orange")}}></div>
+                <div className="game-piece purple" id="hard-purple" onClick={e => {e.preventDefault(); playerChoose("purple")}}></div>
             </div>
+            <form onSubmit={handleSubmit}><button className="start-button" id="hard-start" type="submit">START</button></form>
         </div>
     }
 

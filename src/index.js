@@ -14,6 +14,8 @@ import Easy from "./pages/Easy.js"
 import Medium from "./pages/Medium.js"
 import Hard from "./pages/Hard.js"
 
+// HOOKS
+
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([

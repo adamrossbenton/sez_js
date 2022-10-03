@@ -3,11 +3,11 @@ import GameHooks from "../hooks/GameHooks";
 
 const Medium = props => {
 
-    const {playGame} = GameHooks()
+    const {compChoose} = GameHooks()
 
     const handleSubmit = e => {
         e.preventDefault()
-        playGame("medium")
+        compChoose("medium")
     }
 
     const medBoard = () => {
