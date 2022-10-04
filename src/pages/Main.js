@@ -1,12 +1,19 @@
 import React from "react";
 import {Outlet, Link} from "react-router-dom"
-
+import GameHooks from "../hooks/GameHooks.js";
 
 const Main = props => {
 
+    const {compChoose, playerChoose, turn, turnCounter} = GameHooks()
+
     const diffSelect = () => {
         return <div className="container" id="diff-select">
-            <Outlet />            
+            <Outlet 
+                compChoose = {compChoose}
+                playerChoose = {playerChoose}
+                turn = {turn}
+                turnCounter = {turnCounter}
+            />            
             <h3>Choose Difficulty</h3>
             <div className="container" id="diffs">
                 <Link to={"/easy"}>EASY</Link>
