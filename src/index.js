@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom"
 import './index.css';
 
@@ -14,18 +13,10 @@ import Easy from "./pages/Easy.js"
 import Medium from "./pages/Medium.js"
 import Hard from "./pages/Hard.js"
 
-// HOOKS
-import {
-  compChoose,
-  playerChoose,
-  turn,
-  turnCounter
-} from './hooks/GameHooks.js';
-
 // OTHER
 import reportWebVitals from './reportWebVitals';
 
-
+// TODO: This seems redundant with routes on App.js, is this really how it's supposed to work?
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,10 +36,6 @@ const router = createBrowserRouter([
       {
         path: "hard",
         element: <Hard
-          compChoose = {compChoose}
-          playerChoose = {playerChoose}
-          turn = {turn}
-          turnCounter = {turnCounter}
         />,
       }
     ]
